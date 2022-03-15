@@ -2,6 +2,10 @@
 
 $.getScript("https://shinko-to-kuma.com/scripts/WHBalancerShinkoToKuma.js");
 
+window.alert = function() {
+    console.log.apply(console, arguments);
+};
+
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
