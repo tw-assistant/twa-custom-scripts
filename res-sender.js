@@ -17,7 +17,7 @@ async function automate() {
   await delay(5000);
   $("#coordinateTargetFirstTime").val(coord);
   $("#saveCoord").click();
-  await delay(5000);
+  await delay(60000);
   while (true) {
     await delay(1000);
     const button = $("#sendResources.btn")[0];
