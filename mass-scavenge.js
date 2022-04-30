@@ -1,3 +1,19 @@
+// @name Mass Scavenge
+// @param(string) groupId=0
+// @param(boolean) spear
+// @param(boolean) sword
+// @param(boolean) axe
+// @param(boolean) light
+// @param(boolean) heavy
+// @param(number) spearBackup
+// @param(number) swordBackup
+// @param(number) axeBackup
+// @param(number) lightBackup
+// @param(number) heavyBackup
+// @param(number) runTime_off
+// @param(number) runTime_def
+// @step {gameUrl}/game.php?screen=place&mode=scavenge_mass&group={groupId}
+
 function delay(time, random = 0) {
     return new Promise(function (resolve) {
         setTimeout(resolve, time + parseInt(Math.random() * random));
