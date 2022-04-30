@@ -1,4 +1,7 @@
-// @name    WH-Balancer
+// @name Warehouse Balancer
+// @param(number) waitBeforeStart=60000
+// @param(number) groupId=0
+// @step {gameUrl}/game.php?screen=overview&group={groupId}
 
 $.getScript("https://shinko-to-kuma.com/scripts/WHBalancerShinkoToKuma.js");
 
@@ -11,7 +14,7 @@ function delay(ms) {
 }
 
 async function automate() {
-  await delay(60000);
+  await delay(TWA.waitBeforeStart);
   while (true) {
     await delay(1000);
     if ($("#building")[0]) $("#building").click();
