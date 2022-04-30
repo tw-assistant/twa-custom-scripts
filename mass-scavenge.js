@@ -1,17 +1,17 @@
 // @name Mass Scavenge
 // @param(string) groupId=0
-// @param(boolean) spear
-// @param(boolean) sword
-// @param(boolean) axe
-// @param(boolean) light
-// @param(boolean) heavy
-// @param(number) spearBackup
-// @param(number) swordBackup
-// @param(number) axeBackup
-// @param(number) lightBackup
-// @param(number) heavyBackup
-// @param(number) runTime_off
-// @param(number) runTime_def
+// @param(boolean) spear=true
+// @param(boolean) sword=true
+// @param(boolean) axe=true
+// @param(boolean) light=true
+// @param(boolean) heavy=true
+// @param(number) spearBackup=100
+// @param(number) swordBackup=100
+// @param(number) axeBackup=100
+// @param(number) lightBackup=100
+// @param(number) heavyBackup=100
+// @param(number) runTime_off=4
+// @param(number) runTime_def=4
 // @step {gameUrl}/game.php?screen=place&mode=scavenge_mass&group={groupId}
 
 function delay(time, random = 0) {
