@@ -14,7 +14,7 @@ function delay(ms) {
 }
 
 async function automate() {
-  await delay(TWA.waitBeforeStart);
+  await delay(TWA.waitBeforeStart ?? 60000)
   while (true) {
     await delay(1000);
     if ($("#building")[0]) $("#building").click();
