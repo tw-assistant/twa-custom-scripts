@@ -1,5 +1,8 @@
-// @name    Res Sender
-// @param   coord
+// @name Resources Sender
+// @param(number) waitBeforeStart=60000
+// @param(number) groupId=0
+// @param(string) destinyCoord=""
+// @step {gameUrl}/game.php?screen=overview&group={groupId}
 
 const { coord } = TWA;
 
