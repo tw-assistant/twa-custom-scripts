@@ -4,7 +4,7 @@
 // @param(string) destinyCoord
 // @step {gameUrl}/game.php?screen=overview&group={groupId}
 
-const { coord } = TWA;
+const { destinyCoord } = TWA;
 
 $.getScript("https://shinko-to-kuma.com/scripts/res-senderV2.js");
 
@@ -18,7 +18,7 @@ function delay(ms) {
 
 async function automate() {
   await delay(5000);
-  $("#coordinateTargetFirstTime").val(coord);
+  $("#coordinateTargetFirstTime").val(destinyCoord);
   $("#saveCoord").click();
   await delay(TWA.waitBeforeStart ?? 60000)
   while (true) {
