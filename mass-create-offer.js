@@ -1,7 +1,8 @@
 // @name Mass Market Offers
+// @param(string) groupId=0
 // @param(number) reserveMerchants=1
 // @param(number) maxDistance=3
-// @step {gameUrl}/game.php?screen=market&mode=mass_create_offers
+// @step {gameUrl}/game.php?screen=market&mode=mass_create_offers&group={groupId}
 
 function delay (time, random = 0) {
   return new Promise(function (resolve) {
