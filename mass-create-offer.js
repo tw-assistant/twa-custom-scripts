@@ -11,6 +11,9 @@ function delay (time, random = 0) {
 }
 
 new Promise(async (resolve, reject) => {
+  
+  const reserveMerchants = TWA.reserveMerchants || 1;
+  const maxDistance = TWA.maxDistance || 3;
 
   const resources = {
     wood: 0,
