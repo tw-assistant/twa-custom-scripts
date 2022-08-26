@@ -1,6 +1,5 @@
 // @name Train Paladin
 // @param(string) palaId=0
-// @param(number) numberOfSnob=3
 // @step {gameUrl}/game.php?screen=statue&knight={palaId}&mode=knight
 
 function delay (time, random = 0) {
