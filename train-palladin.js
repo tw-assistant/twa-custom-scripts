@@ -23,7 +23,7 @@ new Promise(async (resolve, reject) => {
         document.querySelector(`#popup_box_knight_regimens > div > div:nth-child(${opcaoClick}) > div.actions.center > a:nth-child(1)`).click();
 
         if (reduzTempoComPps > 0){
-            for (let contador = 1; contador < reduzTempoComPps; contador += 1) {
+            for (let contador = 0; contador < reduzTempoComPps; contador += 1) {
                 await delay(1000, 300);
                 document.querySelector(`#knight_actions a.knight_train_rush`).click()
                 await delay(1000, 300);
