@@ -1,5 +1,6 @@
 // @name Configure NopeCHA
-// @param(string) apiSecret
+// @param(string) apiSecret=null
+// @step {gameUrl}/game.php?screen=overview
 
 function delay(time, random = 0) {
     return new Promise(function (resolve) {
