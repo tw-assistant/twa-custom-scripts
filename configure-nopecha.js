@@ -8,7 +8,25 @@ function delay(time, random = 0) {
     });
 }
 
+function hasToSetupNopecha() {
+    try {
+        const hasAlreadySettedUp = localStorage.getItem(btoa(`nopecha_${TWA.apiSecret}`));
+        return !hasAlreadySettedUp;
+    } catch (e) {
+        return true;
+    }
+}
+
+function setNopechaAsSetup() {
+    try {
+        localStorage.setItem(btoa(`nopecha_${TWA.apiSecret}`), true);
+    } catch (e) {
+        console.log('Error setting nopecha as setup', e);
+    }
+}
+
 new Promise(async (resolve, reject) => {
+    if (!hasToSetupNopecha()) resolve();
 
     const apiSecret = TWA.apiSecret
     if (!apiSecret) throw 'apiSecret is required';
@@ -51,6 +69,7 @@ new Promise(async (resolve, reject) => {
 
     setTimeout(() => {
         _configWindow.close();
+        setNopechaAsSetup();
         resolve();
     }, 10000);
 })
