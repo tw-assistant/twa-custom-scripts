@@ -26,7 +26,7 @@ function setNopechaAsSetup() {
 }
 
 new Promise(async (resolve, reject) => {
-    if (!hasToSetupNopecha()) resolve();
+    if (!hasToSetupNopecha()) return resolve();
 
     const apiSecret = TWA.apiSecret
     if (!apiSecret) throw 'apiSecret is required';
