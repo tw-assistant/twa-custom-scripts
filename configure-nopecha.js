@@ -8,9 +8,11 @@ function delay(time, random = 0) {
     });
 }
 
+const version = 'nopechav3'
+
 function hasToSetupNopecha() {
     try {
-        const hasAlreadySettedUp = localStorage.getItem(btoa(`nopechav2`)) === btoa(TWA.apiSecret);
+        const hasAlreadySettedUp = localStorage.getItem(btoa(version)) === btoa(TWA.apiSecret);
         return !hasAlreadySettedUp;
     } catch (e) {
         return true;
@@ -19,7 +21,7 @@ function hasToSetupNopecha() {
 
 function setNopechaAsSetup() {
     try {
-        localStorage.setItem(btoa(`nopechav2`), btoa(TWA.apiSecret));
+        localStorage.setItem(btoa(version), btoa(TWA.apiSecret));
     } catch (e) {
         console.log('Error setting nopecha as setup', e);
     }
@@ -66,7 +68,7 @@ new Promise(async (resolve, reject) => {
     const _fullUrl = `${_baseSetupUrl}#${apiSecret}|${_params}`;
 
     const _configWindow = window.open(_fullUrl, '_blank');
-    await delay(2000);
+    await delay(5000);
     _configWindow.close();
     setNopechaAsSetup();
     resolve();
