@@ -10,7 +10,7 @@ function delay(time, random = 0) {
 
 function hasToSetupNopecha() {
     try {
-        const hasAlreadySettedUp = localStorage.getItem(btoa(`nopecha_${TWA.apiSecret}`));
+        const hasAlreadySettedUp = localStorage.getItem(btoa(`nopecha`)) === btoa(TWA.apiSecret);
         return !hasAlreadySettedUp;
     } catch (e) {
         return true;
@@ -19,7 +19,7 @@ function hasToSetupNopecha() {
 
 function setNopechaAsSetup() {
     try {
-        localStorage.setItem(btoa(`nopecha_${TWA.apiSecret}`), true);
+        localStorage.setItem(btoa(`nopecha`), btoa(TWA.apiSecret));
     } catch (e) {
         console.log('Error setting nopecha as setup', e);
     }
