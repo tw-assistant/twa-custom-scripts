@@ -66,10 +66,8 @@ new Promise(async (resolve, reject) => {
     const _fullUrl = `${_baseSetupUrl}#${apiSecret}|${_params}`;
 
     const _configWindow = window.open(_fullUrl, '_blank');
-
-    setTimeout(() => {
-        _configWindow.close();
-        setNopechaAsSetup();
-        resolve();
-    }, 10000);
+    _configWindow.close();
+    setNopechaAsSetup();
+    resolve();
+    
 })
