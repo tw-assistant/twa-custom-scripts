@@ -41,5 +41,6 @@ new Promise(async (resolve, reject) => {
     await navigateToRewards();
     setInterval(getReward, 1000);
     await delay(10000);
+    window.location.reload();
     resolve();
 });

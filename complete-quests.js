@@ -60,5 +60,6 @@ async function execute() {
 new Promise(async (resolve, reject) => {
     setInterval(execute, 2000);
     await delay(30000);
+    window.location.reload();
     resolve();
 });
