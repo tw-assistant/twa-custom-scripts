@@ -1,8 +1,14 @@
-// @name Recruit Barrack
+// @name Recruit Infantry
 // @step {gameUrl}/game.php?screen=barracks
 // @param(string) troop=spear
 // @param(number) quantity=10
 // @param(number) queueSize=3
+
+const TWA = {
+    troop: 'spear',
+    quantity: 1,
+    queueSize: 3
+};
 
 function delay(time, random = 0) {
     return new Promise(function (resolve) {
