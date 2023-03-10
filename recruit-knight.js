@@ -26,7 +26,7 @@ function delay(time, random = 0) {
 }
 
 new Promise(async (resolve, reject) => {
-    if (!hasToRecruitKnight()) return;
+    if (!hasToRecruitKnight()) return resolve();
 
     try {
         $(".knight_recruit_launch").click();
