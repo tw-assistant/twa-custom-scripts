@@ -8,13 +8,9 @@ function delay(time, random = 0) {
 }
 
 async function main() {
-
-
-    // incomings_cell
     const hasIncomings = $("#incomings_cell").length > 0;
     if (!hasIncomings) return;
 
-    // #content_value .btn
     const establishMilitiaButton = $("#content_value .btn:not(.evt-confirm)");
     if (establishMilitiaButton) {
         establishMilitiaButton.click(); 
