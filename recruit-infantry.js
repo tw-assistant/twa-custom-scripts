@@ -4,12 +4,6 @@
 // @param(number) quantity=10
 // @param(number) queueSize=3
 
-const TWA = {
-    troop: 'spear',
-    quantity: 1,
-    queueSize: 3
-};
-
 function delay(time, random = 0) {
     return new Promise(function (resolve) {
         setTimeout(resolve, time + ~~(Math.random() * random));
