@@ -5,12 +5,6 @@
 // @param(boolean) upgradeUtility=true
 // @param(boolean) upgradeDefense=true
 
-const TWA = {
-    upgradeAttack: false,
-    upgradeUtility: true,
-    upgradeDefense: true,
-}
-
 function delay(time, random = 0) {
     return new Promise(function (resolve) {
         setTimeout(resolve, time + ~~(Math.random() * random));
