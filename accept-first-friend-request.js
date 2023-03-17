@@ -8,9 +8,9 @@ function delay(time, random = 0) {
 }
 
 async function main() {
-    const acceptButtons = $("a[href*='action=approve_buddy']");
+    const acceptButtons = $("a[href*='action=approve_buddy']")[0];
     if (!acceptButtons) return;
-    acceptButtons[0].click();
+    acceptButtons.click();
 }
 
 main();
