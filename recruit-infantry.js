@@ -12,11 +12,11 @@ function delay(time, random = 0) {
 
 new Promise(async (resolve, reject) => {
     try {
-        if ($(".sortable_row").length + 1 >= TWA.queueSize) return resolve();
+        if ($(`.lit-item .${TWA.troop}`).length + 1 >= TWA.queueSize) return resolve();
 
-        const max = parseInt($("input[name='" + TWA.troop + "']").parent()[0].textContent.trim().replace(/\(|\)/g, ''))
+        const max = parseInt($(`input[name='${TWA.troop}']`).parent()[0].textContent.trim().replace(/\(|\)/g, ''))
 
-        $("input[name='" + TWA.troop + "']").val(max > TWA.quantity ? TWA.quantity : max)
+        $(`input[name='${TWA.troop}']`).val(max > TWA.quantity ? TWA.quantity : max);
         await delay(1000, 300);
 
         $(".btn.btn-recruit").click()
