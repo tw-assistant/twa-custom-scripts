@@ -12,7 +12,7 @@ function delay(time, random = 0) {
 
 new Promise(async (resolve, reject) => {
     try {
-        if ($(`.lit-item .${TWA.troop}`).length >= TWA.queueSize) return resolve();
+        if ($(`.sortable_row .${TWA.troop}`).length >= TWA.queueSize) return resolve();
 
         const max = parseInt($(`input[name='${TWA.troop}']`).parent()[0].textContent.trim().replace(/\(|\)/g, ''))
 
