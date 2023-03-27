@@ -10,16 +10,18 @@ if ($("#incomings_amount").length > 0) {
         incomingAmount = parseInt($("#incomings_amount")[0].textContent.trim());
     } catch (error) { }
 
-    const message = {
-        "content": `Incoming attacks: ${incomingAmount}`,
-        "username": `${name} (${id})`,
-    }
+    if (incomingAmount) {
+        const message = {
+            "content": `Incoming attacks: ${incomingAmount}`,
+            "username": `${name} (${id})`,
+        }
 
-    fetch(TWA.discordWebhook, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(message),
-    })
+        fetch(TWA.discordWebhook, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(message),
+        })
+    }
 }
