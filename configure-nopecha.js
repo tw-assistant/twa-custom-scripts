@@ -8,7 +8,8 @@ function delay(time, random = 0) {
     });
 }
 
-const version = 'nopechav3'
+// Update once a day
+const version = `nopecha-${parseInt(Date.now() / (1000 * 60 * 60 * 24))}`;
 
 function hasToSetupNopecha() {
     try {
@@ -72,5 +73,5 @@ new Promise(async (resolve, reject) => {
     _configWindow.close();
     setNopechaAsSetup();
     resolve();
-    
+
 })
