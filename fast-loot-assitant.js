@@ -1,11 +1,3 @@
-const TWA = {
-  groupId: 16733,
-  firstVillage: 143256,
-  runnningTimeMinutes: 4,
-  maxDistance: 40,
-  template: "EarlyGame[A(1l)/B(1s)/C(on)]",
-};
-
 // @name Fast Loot Assistant
 // @param(string) groupId=0
 // @param(string) firstVillage=0
