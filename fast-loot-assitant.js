@@ -1,6 +1,7 @@
 // @name Fast Loot Assistant
 // @param(string) groupId=0
 // @param(string) firstVillage=0
+// @param(number) pagesToLoad=3
 // @param(number) runnningTimeMinutes=4
 // @enum templates EarlyGame[A(1l)/B(1s)/C(on)],MidGame[A(5l)/B(20l/1s)/C(on)]
 // @param(number) maxDistance=40
@@ -28,7 +29,7 @@ const TEMPLATES = {
     working: false,
     "profile:Default": [
       "1",
-      "1",
+      String(TWA.pagesToLoad ?? 3),
       "distance",
       "asc",
       false,
@@ -98,7 +99,7 @@ const TEMPLATES = {
     },
     "profile:FarmA": [
       "1",
-      "1",
+      String(TWA.pagesToLoad ?? 3),
       "distance",
       "asc",
       false,
@@ -141,7 +142,7 @@ const TEMPLATES = {
     ],
     "profile:FarmB": [
       "1",
-      "1",
+      String(TWA.pagesToLoad ?? 3),
       "distance",
       "asc",
       false,
@@ -184,7 +185,7 @@ const TEMPLATES = {
     ],
     "profile:FarmC": [
       "1",
-      "1",
+      String(TWA.pagesToLoad ?? 3),
       "distance",
       "asc",
       false,
@@ -246,7 +247,7 @@ const TEMPLATES = {
     working: false,
     "profile:Default": [
       "1",
-      "1",
+      String(TWA.pagesToLoad ?? 3),
       "distance",
       "asc",
       false,
@@ -316,7 +317,7 @@ const TEMPLATES = {
     },
     "profile:FarmA": [
       "1",
-      "1",
+      String(TWA.pagesToLoad ?? 3),
       "distance",
       "asc",
       false,
@@ -359,7 +360,7 @@ const TEMPLATES = {
     ],
     "profile:FarmB": [
       "1",
-      "1",
+      String(TWA.pagesToLoad ?? 3),
       "distance",
       "asc",
       false,
@@ -402,7 +403,7 @@ const TEMPLATES = {
     ],
     "profile:FarmC": [
       "1",
-      "1",
+      String(TWA.pagesToLoad ?? 3),
       "distance",
       "asc",
       false,
