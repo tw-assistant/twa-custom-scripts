@@ -12,7 +12,9 @@ function delay(time, random = 0) {
 
 new Promise(async (resolve, reject) => {
     try {
-        if ($(`.sortable_row .${TWA.troop}`).length >= TWA.queueSize) return resolve();
+        // Sortable row só funfa quando tem 3 ou mais ordens...
+        // if ($(`.sortable_row .${TWA.troop}`).length >= TWA.queueSize) return resolve();
+        if ($(`.unit_sprite.unit_sprite_smaller.${TWA.troop}`).length >= TWA.queueSize) return resolve();
 
         const max = parseInt($(`input[name='${TWA.troop}']`).parent()[0].textContent.trim().replace(/\(|\)/g, ''))
 

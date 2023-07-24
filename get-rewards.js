@@ -9,7 +9,7 @@ function delay(time, random = 0) {
 
 async function navigateToRewards() {
     try {
-        $(".quest").click();
+        $(".quest#new_quest").click();
         await delay(1000);
     } catch (error) {
         console.log(error);
